@@ -1,0 +1,157 @@
+/* global css  */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    overflow: auto;
+    background-color: #4b4e53;
+}
+
+body .active {
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 15px;
+    max-width: 1200px;
+}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Card section css */
+.heading {
+    text-align: center;
+}
+
+.member {
+    position: relative;
+    display: inline-block;
+    color: lemonchiffon;
+    margin: 40px auto 0;
+    padding: 20px;
+}
+
+.member::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    width: 0;
+    bottom: 0;
+    background: lemonchiffon;
+    height: 4px;
+    transition-property: width;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+
+.member:hover:before {
+    left: 0;
+    right: auto;
+    width: 100%;
+}
+
+.main {
+    margin-top: 30px;
+}
+
+#card-section {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid bisque;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#card-section .card-wrapper {
+    background-color: lemonchiffon;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 400px;
+    margin: 10px 30px;
+    min-height: 275px;
+
+}
+
+#card-section .card-wrapper > div {
+    padding: 5px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 1px solid rgba(0, 0, 0, .25);
+    width: 100px;
+    height: 100px;
+}
+
+#card-section .card-wrapper > div img {
+    border-radius: 50%;
+    width: 100px;
+}
+
+#card-section .card-wrapper ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: left;
+}
+
+#card-section .card-wrapper ul li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 0 0 5px;
+    max-width: max-content;
+
+}
+#card-section .card-wrapper ul li:first-child{
+    width: 100%;
+}
+#card-section .card-wrapper ul li:nth-child(4){
+    display: block;
+}
+#card-section .card-wrapper ul li:nth-child(4) span{
+    margin-left: 72px;
+}
